@@ -34,7 +34,7 @@ class Tui(models.Model):
 	
 #文章
 class Article(models.Model):
-	name = models.CharField('标题', max_length=70)
+	title = models.CharField('标题', max_length=70)
 	excerpt = models.TextField('摘要', max_length=200,blank=True)
 	category = models.ForeignKey(Category, on_delete=models.DO_NOTHING,verbose_name='分类',blank=True,null=True)
 	tags = models.ManyToManyField(Tag,verbose_name='标签',blank=True)
