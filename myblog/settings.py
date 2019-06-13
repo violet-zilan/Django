@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'DjangoUeditor',
 ]
 
 MIDDLEWARE = [
@@ -120,9 +121,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 #静态文件路径
-STATIC_DIRS = (
-    os.path.join(BASE_DIR,'static'),
-)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
 #媒体文件路径
 MEDIA_URL = '/media/'
 MEDIA_DIRS = (
